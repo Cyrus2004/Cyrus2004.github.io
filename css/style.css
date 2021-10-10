@@ -1,0 +1,259 @@
+/* Jeg har foreløpig byttet ut alle bildene med ett jeg har laget selv i Paint, av opphavsrettsmessige årsaker. Bare for å være på den sikre siden. */
+
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    padding-bottom: 50px;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+}
+
+/* Overskrift("welcome to my website) */
+
+.greeting{
+    
+    text-align: center;
+    font-size: 5em;
+    font-family: sans-serif;
+    color: green;
+    padding-top: 20vh;
+    /* Setter overskriften mer eller mindre i midten.
+    Jeg kunne ikke bruke padding på bakgrunnen som med andre bakgrunner, ettersom dette gjorde bakgrunnen altfor stor.
+    Derfor satte jeg den her i stedet */
+}
+
+/* Nav er felles for all navigasjon, main-nav gjelder for hoved-nav-en på toppen. */
+
+.nav{
+    top: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.nav ul{
+   margin: 0;
+}
+
+.nav li{
+   display: inline;
+}
+
+.nav a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.main-nav{
+    background-color: burlywood;
+}
+
+.main-nav a{
+    color:black;
+}
+
+.main-nav a:hover{
+    color: white;
+    /* Fader ut en gradient. */
+    background-image: linear-gradient(rgba(0, 255, 255, 1), rgba(0, 0, 0, 0));
+}
+
+#welcome-section{
+    /* background-image: url("../images/main-background-image.jpg"); */
+    background-image: url(../images/image000008.jpg);
+    background-color: rgba(20, 10, 255, 0.1);
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: 100vh;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Her kunne jeg ha satt inn align-items: center, men da ville teksten vært for høyt oppe i forhold til navbar!*/
+}
+
+.about-background{
+    /* background-image: url(../images/art-background.png); */
+    background-image: url(../images/image000005.jpg);
+    /* Får bildet til å sitte på ett sted, sånn at bare det forrige går opp. */
+    background-attachment: fixed;
+    /* Får bildet til å dekke hele bakgrunnen, og unngår hvitt område. */
+    display: flex;
+}
+
+/* Generell container for tilpassing av innhold */
+
+.container{
+    padding: 0px 100px;
+    width: 100%;
+}
+
+.section-header{
+    text-align: center;
+    font-family: Courier;
+    font-size: 2.8em;
+    color: yellow;
+}
+
+/* Setter stilen til teksten i paragrafene. */
+
+.common-text{
+    /* color: tomato; */
+    color: rgb(88, 88, 255);
+    font-size: 1.5em;
+    font-family: cursive;
+}
+
+/* Bildet ved teksten om meg selv */
+
+/* .stripes{
+    width: 168px;
+    height: 168px;
+    float: left;
+    border-radius: 100%;
+} */
+
+.rock{
+    width: 168px;
+    height: 168px;
+    float: left;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+/*  Dette kjønte jeg ikke så mye av, men hvis jeg får tid, skal jeg lese meg mer opp på det.
+
+    circuit-background{
+    display: grid;
+    position: absolute;
+    z-index: 1;
+    background-image: url(/images/circuit.png);
+    height: 100px;
+    width: 200px;
+}
+
+.circuit-background::before{
+    content: none;
+    position: relative;
+    z-index: -1;
+    background-color: darkblue;
+    height: 200px;
+    width: 300px;
+} */
+
+.circuit-background{
+    /* background-image: url(../images/building-the.future.jpg); */
+    background-image: url(../images/image000002.jpg);
+    align-items: center;
+    
+    height: 100vh;
+}
+
+.project-container{
+    text-align: center;
+}
+
+.project-tile{
+    width: 300px;
+    height: 250px;
+    padding: 5px;
+}
+
+.project-tile:hover{
+    border: solid 5px blue;
+    padding: 0px;
+}
+
+.project-nav{
+    background-color: blue;
+}
+
+.project-nav a{
+    color: rgb(54, 255, 47);
+}
+
+.project-nav a:hover{
+    color: white;
+    /* Fader ut en gradient. */
+    background-image: linear-gradient(rgba(0, 255, 255, 1), rgba(0, 0, 0, 0));
+}
+
+.running-background{
+    background-color: goldenrod;
+}
+
+/* Kalibrerer headeren for å unngå at den kommer bak navbar. */
+.navbar-calibration{
+    padding-top: 25px;
+}
+
+.centralize-image{
+    text-align: center;
+}
+
+.big-image{
+    height: 300px;
+    width: auto;
+}
+
+.segment-header{
+    font-weight: bold;
+}
+
+.segment{
+    margin: 50px 0;
+}
+
+.project-text{
+    /* color: tomato; */
+    color: rgb(0, 13, 201);
+    font-size: 1.1em;
+    font-family: cursive;
+}
+
+.pot_led-background{
+    background-color: goldenrod;
+}
+
+#footer{
+    background-color: indianred;
+    padding: 0 .25em;
+}
+
+.footer-container{
+    display: flex;
+    align-items: center;
+    padding: 0px 100px;
+}
+
+/* Gjelder bare for bildelinkene. */
+.footer-container ul{
+    flex-grow: 1;
+    text-align: right;
+}
+
+.button-size{
+    height: 40px;
+    width: 40px;
+    margin: 0 10px;
+}
+
+.media{
+    margin: 0;
+}
+
+.media-nav li{
+    display: inline;
+}
+
+.button-size{
+    width: 60px;
+    height: 60px;
+}

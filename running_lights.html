@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css\style.css">
+        <title>running lights</title>
+    </head>
+    <body>
+        <header>
+            <nav class="nav project-nav">
+                <ul>
+                    <li><a href="index.html">back</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="background running-background">
+                <div class="container">
+                    <h1 class="section-header navbar-calibration">Running lights project</h1>
+                    <div class="project-text">
+                        <div class="centralize-image">
+                            <img class="big-image" src="images\running_2.png" alt="running lights">
+                        </div>
+                        <p>This project uses an Arduino to light up LEDs in a LED stripe, one after another, so you get a ''dot'' that moves across the line. The speed the dot moves, is determined by the position of a trimmer.
+                        The anode on each light is connected with wires to their own digital pin on the Arduino, with a common GND for all the cathodes on each of them. A seperate trimmer gives signal to the analog input A0.
+                        Schematics and code can be found at the botton of the page.</p>
+                        <section class="segment">
+                            <p class="segment-header">You will need:</p>
+                            <ul>
+                                <li>A soldering iron and some soldering tin</li>
+                                <li>An Arduino and a compatible USB</li>
+                                <li>A vero board</li>
+                                <li>Some wire</li>
+                                <li>Cutting pliers</li>
+                                <li>1 trimmer</li>
+                                <li>7 LEDs</li>
+                                <li>1 220Ohm resistor</li>
+                            </ul>
+                        </section>
+                        <section class="segment">
+                            <h1 class="segment-header">Instructions</h1>
+                            <ol>
+                                <li>Solder the LEDs to the vero board, with a one to three hole distance. Leave a row for the wires coming from the Arduino.</li>
+                                <li>De-insulate seven pieces of wire, and place each of them in the holes before every LDR, before seperately soldering the LDRs and the wires together.</li>
+                                <li>Connect the anodes of each LED together in paralell by making a stripe of soldering tin across them.</li>
+                                <li>Solder a 220Ohm resistor between anywhere on the stripe of soldering tin and the next row(Please don't follow my bad example in the background image).</li>
+                                <li>Solder a piece of wire to the resistor. This will be the GND.</li>
+                                <li>Solder one piece of wire to each of the three terminals on the trimmer.</li>
+                                <li>Connect the wire attached to "A" to GND on the Arduino, connect "B" to 5V, and "W" to pin A0.</li>
+                                <li>Attach the wires soldered to each of he LDRs' anodes to pins D4 to D10</li>
+                                <li>Connect the wire attached to the resistor to the other GND on the Arduino.</li>
+                                <li>Upload and run the Arduino program!(See code below)</li>
+                            </ol>
+                        </section>
+                        <section class="segment">
+                            <h1 class="segment-header">Code</h1>
+                            <p>int pinA = 4; //Defines the lowest pin value.<p>
+                            <p>int pinB = 10; //Defines the highest pin value.</p>
+                            <p>int PWM = 3;</p>
+                            <br>   
+                            <p>void setup() {</p>
+                            <p>for(int pins = pinA; pins <= pinB; pins++) //Setter digitale utganger til output. //This loop sets pins 4-10 as outputs.</p>
+                            <p>{</p>
+                            <p>pinMode(pins, OUTPUT);</p>
+                            <p>}</p>
+                            <p>pinMode(A0, INPUT);</p>
+                            <p>pinMode(PWM, OUTPUT);</p>
+                            <p>}</p>
+                            <br>    
+                            <p>void loop() {</p>
+                            <p>for(int pins = pinA; pins <= pinB; pins++) //Gives running lights</p>
+                            <p>{</p>
+                            <p>digitalWrite(pins, HIGH); //Turns the relevant light on and off in accordance with the ''pins'' variable.</p>
+                            <p>delay(analogRead(A0));</p>
+                            <p>digitalWrite(pins, LOW);</p>
+                            <p>}</p>
+                            <p>}</p>
+                        </section>
+                    </div>
+                    <section class="segment">
+                        <h1 class="segment-header">Schematics</h1>
+                        <div class="project-container">    
+                            <a href="../images/running-block.png" target="blank"><img class="project-tile" src="../images/running-block.png" alt="block diagram"></a>
+                            <a href="../images/running-circuit.png" target="blank"><img class="project-tile" src="../images/running-circuit.png" alt="circuit diagram"></a>
+                        </div>
+                    </section>
+                </div>
+        </section>
+    </body>
+</html>
