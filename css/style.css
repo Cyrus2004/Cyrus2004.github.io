@@ -20,7 +20,7 @@ html, body{
     font-size: 5em;
     font-family: sans-serif;
     color: green;
-    padding-top: 20vh;
+    padding-top: 18vh;
     /* Setter overskriften mer eller mindre i midten.
     Jeg kunne ikke bruke padding på bakgrunnen som med andre bakgrunner, ettersom dette gjorde bakgrunnen altfor stor.
     Derfor satte jeg den her i stedet */
@@ -76,7 +76,6 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Her kunne jeg ha satt inn align-items: center, men da ville teksten vært for høyt oppe i forhold til navbar!*/
 }
 
 .about-background{
