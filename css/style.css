@@ -51,6 +51,12 @@ html, body{
     font-size: 1.5em;
 }
 
+@media only screen and (max-width: 479px) {
+    .nav a{
+    font-size: 2em;
+    }
+}
+
 .main-nav{
     background-color: burlywood;
 }
@@ -151,7 +157,6 @@ html, body{
     /* background-image: url(../images/building-the.future.jpg); */
     background-image: url(../images/image000002.jpg);
     align-items: center;
-    
     height: 100vh;
 }
 
