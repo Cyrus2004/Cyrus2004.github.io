@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css\style.css">
+        <title>pot_led</title>
+    </head>
+    <body>
+        <header>
+            <nav class="nav project-nav">
+                <ul>
+                    <li><a href="index.html">back</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="background pot_led-background">
+                <div class="container">
+                    <h1 class="section-header navbar-calibration">Potentiometer-controlled LED project</h1>
+                    <div class="project-text">
+                        <div class="centralize-image">
+                            <img class="big-image" src="" alt="potentiometer-controlled LED">
+                        </div>
+                        The LED is connected to the Arduino's pin 9 in series with a 220Ohm resistor, which again is connected to GND. A seperate trimmer gives signal to the analog input A1.
+                        Schematics and code can be found at the botton of the page.</p>
+                        <section class="segment">
+                            <h1 class="segment-header">You will need:</h1>
+                            <ul>
+                                <li>An Arduino and a compatible USB</li>
+                                <li>A solderless breadboard</li>
+                                <li>Some wire</li>
+                                <li>Cutting pliers</li>
+                                <li>1 trimmer</li>
+                                <li>1 LED</li>
+                                <li>1 220Ohm resistor</li>
+                            </ul>
+                        </section>
+                        <section class="segment">
+                            <h1 class="segment-header">Instructions</h1>
+                            <ol>
+                                <li>Connect a piece of wire between pin 9 and column 9 on the breadboard.</li>
+                                <li>Place the LED between column 9 and 10.</li>
+                                <li>Place the 220Ohm resistor between column 10 and the minus-row.</li>
+                                <li>Add the trimmer to the circuit, with pin A connected to column 6, W connected to column 5, and pin B connected to column 4.</li>
+                                <li>Make a connection between column 4 and the plus-row.</li>
+                                <li>Make a connection between pin A0 and column 5.</li>
+                                <li>Connect column 6 and the minus-row together.</li>
+                                <li>Connect the plus-row to 5V on the Arduino, and the minus-row to GND on the Arduino.</li>
+                                <li>Upload and run the Arduino program!(See code below)</li>
+                            </ol>
+                        </section>
+                        <section class="segment">
+                            <h1 class="segment-header">Code</h1>
+                            <p>const int pinPot = A0;</p>
+                            <p>const int pinLED = 9;</p>     
+                            <br>   
+                            <p>void setup(){</p>     
+                            <p>pinMode(pinPot, INPUT);</p> 
+                            <p>pinMode(pinLED, OUTPUT);</p> 
+                            <p>}</p>    
+                            <br>    
+                            <p>int sensor = 0; //Stores inndata from the trimmer.</p> 
+                            <p>int brightness = 0; //Stores output value going to LED.</p> 
+                             <br>   
+                            <p>void loop(){</p> 
+                            <p>sensor = analogRead(pinPot);</p> 
+                            <p>brightness = map(sensor, 0, 1023, 0, 255); //Translates from 11-bit signal from the trimmer, to 8-bit duty-cycle going to LED.</p> 
+                            <p>analogWrite(pinLED, brightness);</p>
+                            <p>}</p>
+                        </section>
+                        <section class="segment">
+                            <p class="segment-header">Schematics</p>
+                            <div class="project-container">
+                                <div class="project-limiter">
+                                    <a href="../images/potLED-block.png" target="blank"><img class="project-tile" src="../images/potLED-block.png" alt="block diagram"></a>
+                                    <a href="../images/potLED-circuit.png" target="blank"><img class="project-tile" src="../images/potLED-circuit.png" alt="circuit diagram"></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+        </section>
+    </body>
+</html>
