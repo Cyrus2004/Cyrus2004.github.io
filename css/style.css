@@ -51,10 +51,9 @@ html, body{
     font-size: 1.5em;
 }
 
-@media only screen and (max-width: 479px) {
+@media (max-width: 479px) {
     .nav a{
     font-size: 2em;
-    text-decoration: line-through;
     }
 }
 

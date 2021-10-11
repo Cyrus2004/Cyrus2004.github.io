@@ -17,9 +17,9 @@
                     <h1 class="section-header navbar-calibration">Potentiometer-controlled LED project</h1>
                     <div class="project-text">
                         <div class="centralize-image">
-                            <img class="big-image" src="" alt="potentiometer-controlled LED">
+                            <img class="big-image" src="images\pot_LED.jpg" alt="potentiometer-controlled LED">
                         </div>
-                        The LED is connected to the Arduino's pin 9 in series with a 220Ohm resistor, which again is connected to GND. A seperate trimmer gives signal to the analog input A1.
+                        The LED is connected to the Arduino's pin 5 in series with a 220Ohm resistor, which again is connected to GND. A seperate trimmer gives signal to the analog input A1.
                         Schematics and code can be found at the botton of the page.</p>
                         <section class="segment">
                             <h1 class="segment-header">You will need:</h1>
@@ -36,12 +36,12 @@
                         <section class="segment">
                             <h1 class="segment-header">Instructions</h1>
                             <ol>
-                                <li>Connect a piece of wire between pin 9 and column 9 on the breadboard.</li>
+                                <li>Connect a piece of wire between pin 5 and column 9 on the breadboard.</li>
                                 <li>Place the LED between column 9 and 10.</li>
                                 <li>Place the 220Ohm resistor between column 10 and the minus-row.</li>
                                 <li>Add the trimmer to the circuit, with pin A connected to column 6, W connected to column 5, and pin B connected to column 4.</li>
                                 <li>Make a connection between column 4 and the plus-row.</li>
-                                <li>Make a connection between pin A0 and column 5.</li>
+                                <li>Make a connection between pin A1 and column 5.</li>
                                 <li>Connect column 6 and the minus-row together.</li>
                                 <li>Connect the plus-row to 5V on the Arduino, and the minus-row to GND on the Arduino.</li>
                                 <li>Upload and run the Arduino program!(See code below)</li>
@@ -49,8 +49,8 @@
                         </section>
                         <section class="segment">
                             <h1 class="segment-header">Code</h1>
-                            <p>const int pinPot = A0;</p>
-                            <p>const int pinLED = 9;</p>     
+                            <p>const int pinPot = A1;</p>
+                            <p>const int pinLED = 5;</p>     
                             <br>   
                             <p>void setup(){</p>     
                             <p>pinMode(pinPot, INPUT);</p> 
