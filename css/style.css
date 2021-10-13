@@ -1,14 +1,18 @@
 /* Jeg har foreløpig byttet ut alle bildene med ett jeg har laget selv i Paint, av opphavsrettsmessige årsaker. Bare for å være på den sikre siden. */
 
+/* Gjelder for hele HTML og body. Dette er altså ikke en class. */
+/* Det er fint å sette margin og padding til 0 som et utganspunkt, for å unngå kluss. */
 html, body{
     margin: 0;
     padding: 0;
 }
 
+/* Generelle oppsett for bakgrunn. */
 .background{
     padding-bottom: 50px;
     background-size: cover;
     background-blend-mode: multiply;
+    /* Tilpasser innholdet i flexboxen, for å unngå overflow */
     display: flex;
 }
 
@@ -54,6 +58,7 @@ html, body{
 @media (max-width: 479px) {
     .nav a{
     font-size: 2em;
+    text-decoration: line-through;
     }
 }
 
@@ -78,6 +83,7 @@ html, body{
     background-blend-mode: multiply;
     background-size: cover;
     height: 100vh;
+    /* Overstyrer annen padding og margin. */
     max-height: 100vh;
     display: flex;
     justify-content: center;
@@ -89,8 +95,6 @@ html, body{
     background-image: url(../images/image000005.jpg);
     /* Får bildet til å sitte på ett sted, sånn at bare det forrige går opp. */
     background-attachment: fixed;
-    /* Får bildet til å dekke hele bakgrunnen, og unngår hvitt område. */
-    display: flex;
 }
 
 /* Generell container for tilpassing av innhold */
