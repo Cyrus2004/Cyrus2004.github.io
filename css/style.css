@@ -216,6 +216,8 @@ html, body{
 
 .segment-header{
     font-weight: bold;
+    text-align: center;
+    font-size: 1.1em;
 }
 
 .segment{
