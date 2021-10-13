@@ -7,19 +7,16 @@ html, body{
     padding: 0;
 }
 
-/* Generelle oppsett for bakgrunn. */
+/* Generelt oppsett for bakgrunner. */
 .background{
-    padding-bottom: 50px;
     background-size: cover;
     background-blend-mode: multiply;
-    /* Tilpasser innholdet i flexboxen, for å unngå overflow */
     display: flex;
 }
 
 /* Overskrift("welcome to my website) */
 
 .greeting{
-    
     text-align: center;
     font-size: 5em;
     font-family: sans-serif;
@@ -35,6 +32,7 @@ html, body{
 .nav{
     top: 0;
     position: fixed;
+    /* Tilpasser containerens bredde, så knappene havner i midten. */
     width: 100%;
     text-align: center;
 }
@@ -80,8 +78,8 @@ html, body{
     /* background-image: url("../images/main-background-image.jpg"); */
     background-image: url(../images/image000008.jpg);
     background-color: rgba(20, 10, 255, 0.1);
-    background-blend-mode: multiply;
     background-size: cover;
+    background-blend-mode: multiply;
     height: 100vh;
     /* Overstyrer annen padding og margin. */
     max-height: 100vh;
@@ -100,7 +98,9 @@ html, body{
 /* Generell container for tilpassing av innhold */
 
 .container{
-    padding: 0px 100px;
+    padding: 100px;
+    /* Innholdet holder seg innenfor rammen, basta! */
+    max-width: 100%;
     width: 100%;
 }
 
@@ -109,6 +109,7 @@ html, body{
     font-family: Courier;
     font-size: 2.8em;
     color: yellow;
+    margin-top: 0;
 }
 
 /* Setter stilen til teksten i paragrafene. */
@@ -162,6 +163,8 @@ html, body{
     background-image: url(../images/image000002.jpg);
     align-items: center;
     height: 100vh;
+    width: 100%;
+    /* Gir mange muligheter, blant annet align-items. */
 }
 
 .project-container{
@@ -169,8 +172,8 @@ html, body{
 }
 
 .project-tile{
-    width: 300px;
-    height: 250px;
+    width: 30vw;
+    height: 20vw/1,2;
     padding: 5px;
 }
 
