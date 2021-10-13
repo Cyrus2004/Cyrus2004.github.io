@@ -12,6 +12,7 @@ html, body{
     background-size: cover;
     background-blend-mode: multiply;
     display: flex;
+    justify-content: center;
 }
 
 /* Overskrift("welcome to my website) */
@@ -53,7 +54,8 @@ html, body{
     font-size: 1.5em;
 }
 
-@media (max-width: 479px) {
+/* 479px */
+@media (max-width: 1000px) {
     .nav a{
     font-size: 2em;
     text-decoration: line-through;
@@ -97,12 +99,14 @@ html, body{
 
 /* Generell container for tilpassing av innhold */
 
-.container{
+
+    .container{
     padding: 100px;
     /* Innholdet holder seg innenfor rammen, basta! */
     max-width: 100%;
+    /* Forsikrer om at containeren er strukket over hele viewporten. */
     width: 100%;
-}
+    }
 
 .section-header{
     text-align: center;
@@ -163,17 +167,20 @@ html, body{
     background-image: url(../images/image000002.jpg);
     align-items: center;
     height: 100vh;
-    width: 100%;
     /* Gir mange muligheter, blant annet align-items. */
 }
 
 .project-container{
+    /* Setter objekter på linje i forhold til kontaineren de er i. */
+    justify-content: center;
+    /* Setter objekter på linje i forhold til hverandre. */
+    align-items: center;
     text-align: center;
 }
 
 .project-tile{
     width: 30vw;
-    height: 20vw/1,2;
+    height: 20vw/1.2;
     padding: 5px;
 }
 
