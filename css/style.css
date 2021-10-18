@@ -55,7 +55,7 @@ html, body{
 }
 
 /* Device-width gir enhetens absolutte bredde. */
-@media (max-device-width: 480px) {
+@media (max-device-width: 830px) {
     .nav a{
     font-size: 4em;
     }
