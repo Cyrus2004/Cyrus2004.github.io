@@ -54,11 +54,10 @@ html, body{
     font-size: 1.5em;
 }
 
-/* 479px */
-@media (max-width: 1000px) {
+/* Device-width gir enhetens absolutte bredde. */
+@media (max-device-width: 480px) {
     .nav a{
-    font-size: 2em;
-    text-decoration: line-through;
+    font-size: 4em;
     }
 }
 
@@ -78,7 +77,7 @@ html, body{
 
 #welcome-section{
     /* background-image: url("../images/main-background-image.jpg"); */
-    background-image: url(../images/image000008.jpg);
+    background-image: url(../images/welcome-background.jpg);
     background-color: rgba(20, 10, 255, 0.1);
     background-size: cover;
     background-blend-mode: multiply;
@@ -92,7 +91,7 @@ html, body{
 
 .about-background{
     /* background-image: url(../images/art-background.png); */
-    background-image: url(../images/image000005.jpg);
+    background-image: url(../images/about-background.jpg);
     /* Får bildet til å sitte på ett sted, sånn at bare det forrige går opp. */
     background-attachment: fixed;
 }
@@ -100,13 +99,13 @@ html, body{
 /* Generell container for tilpassing av innhold */
 
 
-    .container{
+.container{
     padding: 100px;
     /* Innholdet holder seg innenfor rammen, basta! */
     max-width: 100%;
     /* Forsikrer om at containeren er strukket over hele viewporten. */
     width: 100%;
-    }
+}
 
 .section-header{
     text-align: center;
@@ -164,13 +163,14 @@ html, body{
 
 .circuit-background{
     /* background-image: url(../images/building-the.future.jpg); */
-    background-image: url(../images/image000002.jpg);
+    background-image: url(../images/circuit-background.jpg);
     align-items: center;
     height: 100vh;
     /* Gir mange muligheter, blant annet align-items. */
 }
 
 .project-container{
+    display: flex;
     /* Setter objekter på linje i forhold til kontaineren de er i. */
     justify-content: center;
     /* Setter objekter på linje i forhold til hverandre. */
@@ -214,6 +214,9 @@ html, body{
 
 .centralize-image{
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 .big-image{

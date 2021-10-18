@@ -2,7 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="css\style.css">
-        <title>running lights</title>
+        <title>running_lights</title>
     </head>
     <body>
         <header>
@@ -12,18 +12,18 @@
                 </ul>
             </nav>
         </header>
-        <section class="background running-background">
+        <section class="background pot_led-background">
                 <div class="container">
-                    <h1 class="section-header navbar-calibration">Running lights project</h1>
+                    <h1 class="section-header navbar-calibration"> Running lights project</h1>
                     <div class="project-text">
                         <div class="centralize-image">
                             <img class="big-image" src="images\running_2.png" alt="running lights">
                         </div>
                         <p>This project uses an Arduino to light up LEDs in a LED stripe, one after another, so you get a ''dot'' that moves across the line. The speed the dot moves, is determined by the position of a trimmer.
                         The anode on each light is connected with wires to their own digital pin on the Arduino, with a common GND for all the cathodes on each of them. A seperate trimmer gives signal to the analog input A0.
-                        Schematics and code can be found at the botton of the page.</p>
+                        Schematics and code can be found at the botton of the page.</p>    
                         <section class="segment">
-                            <p class="segment-header">You will need:</p>
+                            <h1 class="segment-header">You will need:</h1>
                             <ul>
                                 <li>A soldering iron and some soldering tin</li>
                                 <li>An Arduino and a compatible USB</li>
@@ -51,13 +51,12 @@
                             </ol>
                         </section>
                         <section class="segment">
-                            <h1 class="segment-header">Code</h1>
-                            <p>int pinA = 4; //Defines the lowest pin value.<p>
-                            <p>int pinB = 10; //Defines the highest pin value.</p>
+                            <p>int pinA = 4; //Defines the lowest output pin value.<p>
+                            <p>int pinB = 10; //Defines the highest output pin value.</p>
                             <p>int PWM = 3;</p>
                             <br>   
                             <p>void setup() {</p>
-                            <p>for(int pins = pinA; pins <= pinB; pins++) //Setter digitale utganger til output. //This loop sets pins 4-10 as outputs.</p>
+                            <p>for(int pins = pinA; pins <= pinB; pins++) //This loop sets pins 4-10 as outputs.</p>
                             <p>{</p>
                             <p>pinMode(pins, OUTPUT);</p>
                             <p>}</p>
@@ -73,16 +72,17 @@
                             <p>digitalWrite(pins, LOW);</p>
                             <p>}</p>
                             <p>}</p>
+    
+                        </section>
+                        <hr>
+                        <section class="segment">
+                            <h1 class="segment-header">Schematics</p>
+                            <div class="project-container">
+                                <a href="../images/running-block.png" target="blank"><img class="project-tile" src="../images/running-block.png" alt="block diagram"></a>
+                                <a href="../images/running-circuit.png" target="blank"><img class="project-tile" src="../images/running-circuit.png" alt="circuit diagram"></a>
+                            </div>
                         </section>
                     </div>
-                    <hr>
-                    <section class="segment">
-                        <h1 class="segment-header">Schematics</h1>
-                        <div class="project-container">   
-                            <a href="../images/running-block.png" target="blank"><img class="project-tile" src="../images/running-block.png" alt="block diagram"></a>
-                            <a href="../images/running-circuit.png" target="blank"><img class="project-tile" src="../images/running-circuit.png" alt="circuit diagram"></a>
-                        </div>
-                    </section>
                 </div>
         </section>
     </body>
