@@ -28,7 +28,7 @@ html, body{
     Derfor satte jeg den her i stedet */
 }
 
-/* Nav er felles for all navigasjon, main-nav gjelder for hoved-nav-en på toppen. */
+/* Nav er felles for all navigasjon, main-nav gjelder for hoved-nav-en på toppen, og project-nav gjelder for nav-ene til prosjektet. */
 
 .nav{
     top: 0;
@@ -38,13 +38,19 @@ html, body{
     text-align: center;
 }
 
+/* Gjelder for alle linkene, samlet. */
+
 .nav ul{
    margin: 0;
 }
 
+/* Gjelder for boksen som inneholder hver enkel link. */
+
 .nav li{
    display: inline;
 }
+
+/* Gjelder for selve linkene. */
 
 .nav a{
     text-decoration: none;
@@ -102,7 +108,7 @@ html, body{
 .container{
     padding: 100px;
     /* Innholdet holder seg innenfor rammen, basta! */
-    max-width: 100%;
+    max-width: 100vw;
     /* Forsikrer om at containeren er strukket over hele viewporten. */
     width: 100%;
 }
@@ -165,7 +171,6 @@ html, body{
     /* background-image: url(../images/building-the.future.jpg); */
     background-image: url(../images/circuit-background.jpg);
     align-items: center;
-    height: 100vh;
     /* Gir mange muligheter, blant annet align-items. */
 }
 
@@ -175,16 +180,17 @@ html, body{
     justify-content: center;
     /* Setter objekter på linje i forhold til hverandre. */
     align-items: center;
-    text-align: center;
 }
 
 .project-tile{
     width: 30vw;
     height: 20vw/1.2;
     padding: 5px;
+    border: solid rgba(0, 0, 255, 0);
 }
 
 .project-tile:hover{
+    transition: all 0.5s ease-in;
     border: solid 5px blue;
     padding: 0px;
 }
@@ -214,9 +220,6 @@ html, body{
 
 .centralize-image{
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    display: flex;
 }
 
 .big-image{
@@ -247,8 +250,9 @@ html, body{
 
 #profile-link{
     background-color: indianred;
-    padding: 0 .25em;
 }
+
+/*  */
 
 .footer-container{
     display: flex;
@@ -258,6 +262,7 @@ html, body{
 
 /* Gjelder bare for bildelinkene. */
 .footer-container ul{
+    /* Utvider størrelsen på containeren, så langt det lar seg gjøre innenfor flexboks-en. */
     flex-grow: 1;
     text-align: right;
 }
