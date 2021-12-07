@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css\style.css">
+        <title>christmas_decoration</title>
+    </head>
+    <body>
+        <header>
+            <nav class="nav project-nav">
+                <ul>
+                    <li><a href="index.html">back</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="background pot_led-background">
+                <div class="container">
+                    <h1 class="section-header navbar-calibration">Christmas decoration project</h1>
+                    <div class="project-text">
+                        <div class="centralize-image">
+                            <img class="big-image" src="../images/decoration.jpg" alt="potentiometer-controlled LED">
+                        </div>
+                        <p>This christmas decoration has three sets of LED-lights of the colours red, green, and blue, that flashes in order.
+                           The speed that the diodes flash with and the light intensity can be controlled with the trimmers.
+                           The Arduino's output pins only send 2mA, so to flash four diodes at once, a transistor is used as an amplifier.
+                        </p>
+                        <section class="segment">
+                            <h1 class="segment-header">You will need:</h1>
+                            <ul>
+                                <li>An Arduino and a compatible USB</li>
+                                <li>A solderless breadboard</li>
+                                <li>Some wire</li>
+                                <li>Cutting pliers</li>
+                                <li>2 NPN-transistors(BC547)</li>
+                                <li>3 27-ohm resistors</li>
+                                <li>3 2,2k-ohm resistors</li>
+                                <li>2 trimmers</li>
+                                <li>4 red LEDs</li>
+                                <li>4 green LEDs</li>
+                                <li>4 blue LEDs</li>
+                            </ul>
+                        </section>
+                        <section class="segment">
+                            <h1 class="segment-header">Instructions</h1>
+                            <ol>
+                                <!-- Write if time later. -->
+                            </ol>
+                        </section>
+                        <section class="segment">
+                            <h1 class="segment-header">Code</h1>
+                            <p>const int Blues = 11; //Pin for the blue diodes</p>
+                            <p>const int Greens = 10; //Pin for the green diodes</p>
+                            <p>const int Reds = 9; //Pin for the blue diodes</p>
+                            <p>const int Strength = A0; //Pin for the trimmer for brightness</p>
+                            <p>const int Speed = A0; //Pin for the trimmer for blink speed</p>
+                            <br>
+                            <p>int StrengthIn = 0; //11-bit input for brightness</p>
+                            <p>int SpeedIn = 0; //11-bit input for blink speed</p>
+                            <p>int Brightness = 0; //8-bit duty-cycle output to LEDs</p>
+                            <p>int Delay = 0; //The actual blink speed in milliseconds</p>
+                            <br>
+                            <p>void setup()</p>
+                            <p>{</p>
+                            <p>//Sets the pins for the LEDs to output</p>
+                            <p>pinMode(Blues, OUTPUT);</p>
+                            <p>pinMode(Greens, OUTPUT);</p>
+                            <p>pinMode(Reds, OUTPUT);</p>
+                            <p>pinMode(Reds, OUTPUT); //We want feedback</p>
+                            <br>
+                            <p>//Setter pinnene for the trimmers to output</p>
+                            <p>pinMode(Speed, INPUT);</p>
+                            <p>pinMode(Strength, INPUT);</p>
+                            <p>}</p>
+                            <br>
+                            <p>void loop()</p>
+                            <p>{</p>
+                            <p>StrengthIn = analogRead(Strength); //Reads the input from the trimmer for brightness, and stores it in StrengthIn</p>
+                            <p>Brightness = map(StrengthIn, 0, 1024, 0, 255); //Maps the 11-bit signal from the trimmer for strength, to an 8-bit duty-cycle signal to the LEDs</p>
+                            <p>SpeedIn = analogRead(Speed); //Reads the input from the trimmer for blink speed, and stores it in SpeedIn</p>
+                            <p>Delay = 800-(map(SpeedIn, 0, 1024, 0, 800)); //Maps the 11-bit signal from the trimmer for blink speed, to a maksimum delay of 800ms. This is subtracted from 800ms, to invert the trimmer.</p>
+                            <br>
+                            <br>
+                            <p>//Information from serial plotter</p>
+                            <br>
+                            <p>//Strength</p>
+                            <p>Serial.print("Strength input = ");</p>
+                            <p>Serial.print(map(StrengthIn, 0, 1024, 0, 100)); //Maps input from trimmer for strength, to percentage</p>
+                            <p>Serial.println("%");</p>
+                            <br>
+                            <p>//Blink speed</p>
+                            <p>Serial.print("Speed input = ");</p>
+                            <p>Serial.print(map(SpeedIn, 0, 1024, 0, 100)); //Maps input from trimmer for blink speed, to percentage</p>
+                            <p>Serial.println("%");</p>
+                            <br>
+                            <br>
+                            <p>//Blinks the lights again, but with blue diodes!</p>
+                            <p>analogWrite(Blues, Brightness); //Sends an analog signal by using duty cycle to blue LEDs, with a strength specified in brightness</p>
+                            <p>delay(Delay); //Blue LEDs stays on while the delay, speciofied in Delay, progresses.</p>
+                            <p>analogWrite(Blues, 0); //Blue LEDs go off, so green LEDs can turn on</p>
+                            <br>
+                            <p>//Blinks the lights again, but with green diodes!</p>
+                            <p>analogWrite(Greens, Brightness);</p>
+                            <p>delay(Delay);</p>
+                            <p>analogWrite(Greens, 0);</p>
+                            <br>
+                            <p>//Blinks the lights again, but with red diodes!</p>
+                            <p>analogWrite(Reds, Brightness);</p>
+                            <p>delay(Delay);</p>
+                            <p>analogWrite(Reds, 0);</p>
+                            <br>
+                            <p>//The process starts again, and green diodes trun themselves on again!</p>
+                            <p>}</p>
+                        </section>
+                        <hr>
+                        <section class="segment">
+                            <h1 class="segment-header">Schematics</p>
+                            <div class="project-container tile-stack">
+                                <a href="../images/decoration-block.png" target="blank"><img class="project-tile" src="../images/decoration-block.png" alt="block diagram"></a>
+                                <a href="../images/decoration-circuit.png" target="blank"><img class="project-tile" src="../images/decoration-circuit.png" alt="circuit diagram"></a>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+        </section>
+    </body>
+</html>
