@@ -16,21 +16,23 @@
                     <li><a href="#about">about me</a></li>
                     <!-- <li><a href="#CV">CV</a></li> -->
                     <li><a href="#projects">projects</a></li>
-                    <!-- <li><a href="#svalbard">trip to Svalbarddddd</a></li> -->
+                    <!-- <li><a href="#svalbard">trip to Svalbard</a></li> -->
                     <li><a href="#profile-link">links</a></li>
+                    <li><a href="work.html" target="blank">work placement</a></li>
                 </ul>
             </nav>
                 <!-- Kun for ryddighetens skyld! -->
-                <div>
-                    <div id="welcome-section" class="background">
-                    <h1 class="greeting">Welcome to my website!</h1>
-                </div>
+                <section>
+                    <div id="welcome-section" class="background top-section">
+                        <h1 class="greeting-title title">Welcome to my website!</h1>
+                    </div>
+                </section>
         </header>
         <!-- Brukte section i stedet for div, bare så jeg kunne legge til en flexbox i CSS. -->
         <section id="about" class="about-background background">
             <div class="container">
-                <h1 class="section-header">About me</h1>
-                <div class="common-text">
+                <h1 class="main-section-header section-header">About me</h1>
+                <div class="common-text main-common-text">
                     <!-- <img class="rock" src="images\forest-rock.jpg" alt="A painting by Neil Simone"> -->
                     <img class="rock" src="../images/rock_2.png" alt="rock">
                     <p>My name is Cyrus, and I was born in 2004. Usually, I fill my spare time with reading books, writing short stories, playing video games, doing nothing, and riding around on my bike. I also have a small drone that I sometimes fly in the park during spring/summer/autumn.</p>
@@ -41,17 +43,18 @@
         </section>
         <section id="projects"class="circuit-background background">
             <div class="container">
-                <h1 class="section-header">Projects</h1>
+                <h1 class="main-section-header section-header">Projects</h1>
+                <!-- Bildene som hyperlinker -->
                 <div class="project-container">
-                        <a href="pot_led.html" target="blank"><img class="project-tile" src="../images/pot_LED.jpg" alt="potentiometer-controlled LED"></a>
-                        <a href="running_lights.html" target="blank"><img class="project-tile" src="../images/running.jpg" alt="running lights"></a>
-                    </div>
+                    <a href="pot_led.html" target="blank"><img class="project-tile" src="../images/pot_LED.jpg" alt="potentiometer-controlled LED"></a>
+                    <a href="running_lights.html" target="blank"><img class="project-tile" src="../images/running.jpg" alt="running lights"></a>
+                    <a href="christmas_decoration.html" target="blank"><img class="project-tile" src="../images/decoration.jpg"></a>
                 </div>
             </div>
         </section>
         <footer id="profile-link">
             <div class="footer-container">
-                <h3 class="section-header media">links</h3>
+                <h3 class="main-section-header section-header media">links</h3>
                 <ul class="media-nav">
                     <li>
                         <a href="https://github.com/Cyrus2004" target="blank"><img class="button-size" src="../images/git_hub-logo.png" alt="Github"></a>

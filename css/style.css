@@ -17,11 +17,18 @@ html, body{
 
 /* Overskrift("welcome to my website) */
 
-.greeting{
+.greeting-title{
+    color: green;
+}
+
+.work-title{
+    color: white;
+}
+
+.title{
     text-align: center;
     font-size: 5em;
     font-family: sans-serif;
-    color: green;
     padding-top: 10vh;
     /* Setter overskriften mer eller mindre i midten.
     Jeg kunne ikke bruke padding på bakgrunnen som med andre bakgrunner, ettersom dette gjorde bakgrunnen altfor stor.
@@ -81,18 +88,43 @@ html, body{
     background-image: linear-gradient(rgba(0, 255, 255, 1), rgba(0, 0, 0, 0));
 }
 
-#welcome-section{
-    /* background-image: url("../images/main-background-image.jpg"); */
-    background-image: url(../images/welcome-background.jpg);
-    background-color: rgba(20, 10, 255, 0.1);
+/* Navbar for utplassering. */
+.work-nav{
+    background-image: linear-gradient(rgba(100, 100, 100, 1), rgba(100, 100, 100, 0));
+}
+
+.work-nav a{
+    color: black;
+}
+
+.work-nav a:hover{
+    background-image: linear-gradient(rgba(130, 130, 130, 1), rgba(130, 130, 130, 0));
+}
+
+.work-nav a:hover{
+    color: white;
+}
+
+.top-section{
     background-size: cover;
     background-blend-mode: multiply;
     height: 100vh;
     /* Overstyrer annen padding og margin. */
     max-height: 100vh;
+}
+
+#welcome-section{
+    /* background-image: url("../images/main-background-image.jpg"); */
+    background-image: url(../images/welcome-background.jpg);
+    background-color: rgba(20, 10, 255, 0.1);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.work-section{
+    background-image: url(../images/work-background.jpg);
+    background-color: rgba(20, 20, 20, 0.3);
 }
 
 .about-background{
@@ -103,8 +135,6 @@ html, body{
 }
 
 /* Generell container for tilpassing av innhold */
-
-
 .container{
     padding: 100px;
     /* Innholdet holder seg innenfor rammen, basta! */
@@ -117,17 +147,23 @@ html, body{
     text-align: center;
     font-family: Courier;
     font-size: 2.8em;
-    color: yellow;
     margin-top: 0;
+}
+
+.main-section-header{
+    color: yellow;
 }
 
 /* Setter stilen til teksten i paragrafene. */
 
 .common-text{
     /* color: tomato; */
-    color: rgb(88, 88, 255);
     font-size: 1.5em;
     font-family: cursive;
+}
+
+.main-common-text{
+    color: rgb(88, 88, 255);
 }
 
 /* Bildet ved teksten om meg selv */
@@ -171,15 +207,19 @@ html, body{
     /* background-image: url(../images/building-the.future.jpg); */
     background-image: url(../images/circuit-background.jpg);
     align-items: center;
+    justify-content: center;
     /* Gir mange muligheter, blant annet align-items. */
 }
 
 .project-container{
-    display: flex;
-    /* Setter objekter på linje i forhold til kontaineren de er i. */
-    justify-content: center;
+    /* Stacker elementene, i dette tilfellet bildene, ved siden og oppå hverandre. */
+    display: inline-block;
     /* Setter objekter på linje i forhold til hverandre. */
-    align-items: center;
+    text-align: center;
+    /* Setter objekter på linje i forhold til kontaineren de er i. */
+    /* justify-content: center; */
+    /* Setter objekter på linje i forhold til hverandre. */
+    /* align-items: center; */
 }
 
 .project-tile{
@@ -193,6 +233,11 @@ html, body{
     padding: 0px;
 }
 
+.tile-stack{
+    display: flex;
+    flex-direction: column;
+}
+
 .project-nav{
     background-color: blue;
 }
@@ -202,9 +247,9 @@ html, body{
 }
 
 .project-nav a:hover{
-    color: white;
     /* Fader ut en gradient. */
     background-image: linear-gradient(rgba(0, 255, 255, 1), rgba(0, 0, 0, 0));
+    color: white;
 }
 
 .running-background{
@@ -246,16 +291,31 @@ html, body{
     background-color: goldenrod;
 }
 
+.work-section-header{
+    color: lightseagreen;
+}
+
+.work-common-text{
+    color: limegreen
+}
+
+.printer-background{
+    background-image: url(../images/printer.jpg);
+}
+
+.worksite-background{
+    background-image: url(../images/tevlingveien_15.png);
+}
+
 #profile-link{
     background-color: indianred;
 }
-
-/*  */
 
 .footer-container{
     display: flex;
     align-items: center;
     padding: 0px 100px;
+    margin-top: 0;
 }
 
 /* Gjelder bare for bildelinkene. */
