@@ -115,7 +115,9 @@ html, body{
 
 #welcome-section{
     /* background-image: url("../images/main-background-image.jpg"); */
-    background-image: url(../images/welcome-background.jpg);
+    /* background-image: url(../images/welcome-background.jpg); */
+    
+    background-image: url(../images/stars.png);
     background-color: rgba(20, 10, 255, 0.1);
     display: flex;
     justify-content: center;
@@ -129,9 +131,11 @@ html, body{
 
 .about-background{
     /* background-image: url(../images/art-background.png); */
-    background-image: url(../images/about-background.jpg);
+    /* background-image: url(../images/about-background.jpg); */
+    
+    background-image: url(../images/stars.png);
     /* Får bildet til å sitte på ett sted, sånn at bare det forrige går opp. */
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 /* Generell container for tilpassing av innhold */
@@ -159,11 +163,13 @@ html, body{
 .common-text{
     /* color: tomato; */
     font-size: 1.5em;
-    font-family: cursive;
+    /* font-family: cursive; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .main-common-text{
-    color: rgb(88, 88, 255);
+    /* color: rgb(88, 88, 255); */
+    color: rgb(89, 89, 255);
 }
 
 /* Bildet ved teksten om meg selv */
@@ -205,7 +211,10 @@ html, body{
 
 .circuit-background{
     /* background-image: url(../images/building-the.future.jpg); */
-    background-image: url(../images/circuit-background.jpg);
+    /* background-image: url(../images/circuit-background.jpg); */
+    /* background-image: url(../images/about-background.jpg); */
+    
+    background-image: url(../images/stars.png);
     align-items: center;
     justify-content: center;
     /* Gir mange muligheter, blant annet align-items. */
@@ -296,7 +305,7 @@ html, body{
 }
 
 .work-common-text{
-    color: limegreen
+    color: rgb(62, 255, 62)
 }
 
 .printer-background{
