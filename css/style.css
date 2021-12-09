@@ -18,7 +18,8 @@ html, body{
 /* Overskrift("welcome to my website) */
 
 .greeting-title{
-    color: green;
+    /* color: green; */
+    color: yellow;
 }
 
 .work-title{
@@ -75,11 +76,15 @@ html, body{
 }
 
 .main-nav{
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    /* Hologrameffekt. */
+    background-image: linear-gradient(rgba(93, 93, 255, 1), rgba(0, 0, 0, 1));
 }
 
 .main-nav a{
-    color:black;
+    /* color:black; */
+    /* Hologramfarge. */
+    color: rgb(206, 206, 255);
 }
 
 .main-nav a:hover{
@@ -156,6 +161,11 @@ html, body{
 
 .main-section-header{
     color: yellow;
+}
+
+.footer-section-header{
+    /* Hologramfarge. */
+    color: rgb(206, 206, 255);
 }
 
 /* Setter stilen til teksten i paragrafene. */
@@ -305,7 +315,7 @@ html, body{
 }
 
 .work-common-text{
-    color: rgb(62, 255, 62)
+    color: rgb(238, 56, 56);
 }
 
 .printer-background{
@@ -317,7 +327,9 @@ html, body{
 }
 
 #profile-link{
-    background-color: indianred;
+    /* background-color: indianred; */
+    /* Hologrameffekt. */
+    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(93, 93, 255, 1));
 }
 
 .footer-container{
