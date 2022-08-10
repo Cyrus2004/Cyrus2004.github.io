@@ -18,8 +18,7 @@ html, body{
 /* Overskrift("welcome to my website) */
 
 .greeting-title{
-    /* color: green; */
-    color: yellow;
+    color: green;
 }
 
 .work-title{
@@ -76,15 +75,11 @@ html, body{
 }
 
 .main-nav{
-    /* background-color: burlywood; */
-    /* Hologrameffekt. */
-    background-image: linear-gradient(rgba(93, 93, 255, 1), rgba(0, 0, 0, 1));
+    background-color: burlywood;
 }
 
 .main-nav a{
-    /* color:black; */
-    /* Hologramfarge. */
-    color: rgb(206, 206, 255);
+    color:black;
 }
 
 .main-nav a:hover{
@@ -120,10 +115,10 @@ html, body{
 
 #welcome-section{
     /* background-image: url("../images/main-background-image.jpg"); */
-    /* background-image: url(../images/welcome-background.jpg); */
+    background-image: url(../images/welcome-background.jpg);
     
-    background-image: url(../images/stars.png);
-    background-color: rgba(20, 10, 255, 0.1);
+    /* background-image: url(../images/stars.png); */
+    /* background-color: rgba(20, 10, 255, 0.1); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -136,9 +131,9 @@ html, body{
 
 .about-background{
     /* background-image: url(../images/art-background.png); */
-    /* background-image: url(../images/about-background.jpg); */
+    background-image: url(../images/about-background.jpg);
     
-    background-image: url(../images/stars.png);
+    /* background-image: url(../images/stars.png); */
     /* Får bildet til å sitte på ett sted, sånn at bare det forrige går opp. */
     /* background-attachment: fixed; */
 }
@@ -160,12 +155,7 @@ html, body{
 }
 
 .main-section-header{
-    color: yellow;
-}
-
-.footer-section-header{
-    /* Hologramfarge. */
-    color: rgb(206, 206, 255);
+    color: rgb(88, 88, 255);
 }
 
 /* Setter stilen til teksten i paragrafene. */
@@ -173,13 +163,13 @@ html, body{
 .common-text{
     /* color: tomato; */
     font-size: 1.5em;
-    /* font-family: cursive; */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
 }
 
 .main-common-text{
-    /* color: rgb(88, 88, 255); */
-    color: rgb(89, 89, 255);
+    color: rgb(30, 255, 0);
+    /* color: rgb(89, 89, 255); */
 }
 
 /* Bildet ved teksten om meg selv */
@@ -221,10 +211,10 @@ html, body{
 
 .circuit-background{
     /* background-image: url(../images/building-the.future.jpg); */
-    /* background-image: url(../images/circuit-background.jpg); */
+    background-image: url(../images/circuit-background.jpg);
     /* background-image: url(../images/about-background.jpg); */
     
-    background-image: url(../images/stars.png);
+    /* background-image: url(../images/stars.png); */
     align-items: center;
     justify-content: center;
     /* Gir mange muligheter, blant annet align-items. */
@@ -315,7 +305,7 @@ html, body{
 }
 
 .work-common-text{
-    color: rgb(238, 56, 56);
+    color: rgb(62, 255, 62)
 }
 
 .printer-background{
@@ -327,9 +317,7 @@ html, body{
 }
 
 #profile-link{
-    /* background-color: indianred; */
-    /* Hologrameffekt. */
-    background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(93, 93, 255, 1));
+    background-color: indianred;
 }
 
 .footer-container{
